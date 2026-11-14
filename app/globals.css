@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
+  --forest: #071d13;
+  --dark-green: #103d27;
+  --primary: #167a43;
+  --lime: #c8f169;
+  --light-lime: #d8ff72;
+  --soft-bg: #f6f8f3;
+  --secondary-text: #a8b8ac;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--forest);
 }
 
 @theme inline {
+  --color-forest: var(--forest);
+  --color-dark-green: var(--dark-green);
+  --color-primary: var(--primary);
+  --color-lime: var(--lime);
+  --color-light-lime: var(--light-lime);
+  --color-soft-bg: var(--soft-bg);
+  --color-secondary-text: var(--secondary-text);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.hero-grid {
+  background-color: var(--forest);
+  background-image:
+    linear-gradient(rgba(200, 241, 105, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 241, 105, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 50% 20%,
+      rgba(200, 241, 105, 0.14),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 50% 80%,
+      rgba(22, 122, 67, 0.35),
+      transparent 70%
+    );
+}
+
+.glass-widget {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background: rgba(16, 61, 39, 0.55);
+  backdrop-filter: blur(12px);
+  padding: 0.85rem 1rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.animate-float:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.animate-float:nth-child(4) {
+  animation-delay: 2.4s;
 }
