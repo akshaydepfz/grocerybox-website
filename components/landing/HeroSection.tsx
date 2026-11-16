@@ -6,6 +6,7 @@ import { LaptopMockup } from "@/components/mockups/LaptopMockup";
 import { PhoneMockup } from "@/components/mockups/PhoneMockup";
 import { PhoneScreenImage } from "@/components/mockups/PhoneScreenImage";
 import { MerchantDashboardScreen } from "@/components/mockups/MerchantDashboardScreen";
+import { WatchTutorialButton } from "@/components/landing/WatchTutorialButton";
 
 export function HeroSection() {
   return (
@@ -36,12 +37,7 @@ export function HeroSection() {
             Create Your Store
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link
-            href="#features"
-            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-lime/40 hover:bg-white/10"
-          >
-            Explore Platform
-          </Link>
+          <WatchTutorialButton />
         </div>
         <p className="mt-6 text-xs text-secondary-text md:text-sm">
           No Coding Required · Quick Setup · Built for Local Businesses
