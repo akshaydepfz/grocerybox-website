@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Footer } from "@/components/layout/Footer";
+import { appUrl } from "@/lib/brand";
 
 export function FinalCTASection() {
   return (
@@ -18,7 +19,7 @@ export function FinalCTASection() {
               your customers.
             </p>
             <Link
-              href="#pricing"
+              href={appUrl}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-lime px-8 py-4 text-sm font-bold text-forest transition hover:bg-light-lime"
             >
               Create Your Store Now

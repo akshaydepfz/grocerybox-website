@@ -7,6 +7,7 @@ import { PhoneMockup } from "@/components/mockups/PhoneMockup";
 import { PhoneScreenImage } from "@/components/mockups/PhoneScreenImage";
 import { MerchantDashboardScreen } from "@/components/mockups/MerchantDashboardScreen";
 import { WatchTutorialButton } from "@/components/landing/WatchTutorialButton";
+import { appUrl } from "@/lib/brand";
 
 export function HeroSection() {
   return (
@@ -31,7 +32,7 @@ export function HeroSection() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            href="#pricing"
+            href={appUrl}
             className="inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-bold text-forest transition hover:bg-light-lime"
           >
             Create Your Store

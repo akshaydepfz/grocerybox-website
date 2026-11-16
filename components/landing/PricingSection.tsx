@@ -2,17 +2,21 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { appUrl } from "@/lib/brand";
 
 const plans = [
   {
-    name: "Starter",
-    price: "₹99",
+    name: "Basic",
+    price: "₹199",
     features: [
-      "Your own online store",
-      "Product management",
-      "Category management",
-      "Mobile-friendly storefront",
-      "Basic order management",
+      "100 products",
+      "Unlimited orders",
+      "GroceryBox subdomain",
+      "WhatsApp ordering",
+      "UPI and COD options",
+      "Online storefront",
+      "Admin panel",
+      "Mobile-friendly website",
     ],
     highlighted: false,
   },
@@ -20,20 +24,25 @@ const plans = [
     name: "Growth",
     price: "₹399",
     features: [
-      "Everything in Starter",
-      "WhatsApp ordering",
-      "Delivery configuration",
-      "Advanced store settings",
+      "200 products",
+      "Unlimited orders",
+      "Custom domain",
+      "Mobile storefront",
+      "Admin panel",
+      "Delivery-boy app/site",
+      "Delivery management features",
     ],
     highlighted: true,
   },
   {
     name: "Pro",
-    price: "₹699",
+    price: "₹599",
     features: [
       "Everything in Growth",
-      "Advanced business tools",
-      "Enhanced store management",
+      "Unlimited products",
+      "Advanced dashboard and reports",
+      "Multiple delivery boys",
+      "Coupons and promotional tools",
       "Priority support",
     ],
     highlighted: false,
@@ -94,7 +103,7 @@ export function PricingSection() {
                   ))}
                 </ul>
                 <Link
-                  href="#contact"
+                  href={appUrl}
                   className={`mt-8 block rounded-full py-3 text-center text-sm font-semibold transition ${
                     plan.highlighted
                       ? "bg-lime text-forest hover:bg-light-lime"

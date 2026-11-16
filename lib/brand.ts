@@ -1,3 +1,5 @@
+export const appUrl = "https://app.grocerybox.in" as const;
+
 export const brand = {
   name: "GroceryBox",
   tagline: "Your Business. Your Online Store.",

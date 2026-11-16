@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Can customers order through WhatsApp?",
-    a: "Yes. WhatsApp ordering is available on Growth and Pro plans.",
+    a: "Yes. WhatsApp ordering is included on the Basic plan and above.",
   },
   {
     q: "Can I configure delivery charges?",
