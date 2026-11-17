@@ -1,9 +1,10 @@
 import Image from "next/image";
 
 const WHATSAPP_NUMBER = "919567602325";
+const WHATSAPP_MESSAGE = "Hi, I'm interested in GroceryBox";
 
 export function WhatsAppFloat() {
-  const href = `https://wa.me/${WHATSAPP_NUMBER}`;
+  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
     <a
