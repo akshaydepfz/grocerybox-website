@@ -41,7 +41,7 @@ export function WatchTutorialButton() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-lime/40 hover:bg-white/10"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-lime/40 hover:bg-white/10 sm:w-auto"
       >
         <Play className="h-4 w-4 fill-current" aria-hidden />
         Watch Tutorial

@@ -7,6 +7,7 @@ import { PhoneMockup } from "@/components/mockups/PhoneMockup";
 import { PhoneScreenImage } from "@/components/mockups/PhoneScreenImage";
 import { MerchantDashboardScreen } from "@/components/mockups/MerchantDashboardScreen";
 import { WatchTutorialButton } from "@/components/landing/WatchTutorialButton";
+import { WhatsAppSupportButton } from "@/components/landing/WhatsAppSupportButton";
 import { appUrl } from "@/lib/brand";
 
 export function HeroSection() {
@@ -38,7 +39,10 @@ export function HeroSection() {
             Create Your Store
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <WatchTutorialButton />
+          <div className="flex w-full max-w-xs flex-col items-stretch gap-3 sm:w-auto sm:max-w-none">
+            <WatchTutorialButton />
+            <WhatsAppSupportButton />
+          </div>
         </div>
         <p className="mt-6 text-xs text-secondary-text md:text-sm">
           No Coding Required · Quick Setup · Built for Local Businesses
